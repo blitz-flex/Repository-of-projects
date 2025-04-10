@@ -442,6 +442,50 @@ html.dark .section-heading .section-number {
   cursor: pointer;
 }
 
+/* Footer Styles */
+.site-footer {
+  @apply text-center text-xs py-8 px-6 text-secondary dark:text-dark-secondary font-mono;
+}
+
+.footer-social-mobile {
+  @apply flex justify-center space-x-6 mb-4 md:hidden;
+}
+
+.footer-social-link {
+  @apply text-darkText dark:text-lightText hover:text-accent dark:hover:text-dark-accent transition;
+}
+
+.footer-social-link i {
+  @apply text-xl;
+}
+
+.footer-credit-link {
+  @apply text-accent dark:text-dark-accent hover:underline;
+}
+
 @media (max-width: 480px) {
   /* მობილური ეკრანისთვის დამატებითი ცვლილებები საჭიროების შემთხვევაში */
+}
+
+/* Social Section Styles */
+.social-section {
+  @apply py-12 px-6 text-center;
+}
+
+.social-links-container {
+  @apply flex justify-center items-center gap-6;
+}
+
+.social-link-item {
+  @apply text-heading dark:text-dark-heading hover:text-accent dark:hover:text-dark-accent transition-colors p-2;
+}
+
+.social-link-item svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
