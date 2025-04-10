@@ -145,3 +145,47 @@ html {
 .mobile-nav .resume-button {
   @apply px-4 py-2;
 }
+
+/* Hero Section Styles */
+.hero-section {
+  @apply min-h-screen flex items-center justify-center px-6 pt-24 pb-12;
+}
+
+.hero-content {
+  @apply text-center max-w-3xl mx-auto;
+}
+
+/* Add float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-intro {
+  @apply text-accent dark:text-dark-accent text-sm mb-2 font-mono;
+}
+
+.hero-title {
+  @apply text-4xl sm:text-5xl md:text-7xl font-bold text-heading dark:text-dark-heading leading-tight;
+}
+
+.hero-subtitle {
+  @apply text-2xl sm:text-3xl md:text-4xl mt-2 text-secondary dark:text-dark-secondary;
+}
+
+.hero-description {
+  @apply mt-6 max-w-xl mx-auto text-secondary dark:text-dark-secondary text-base sm:text-lg;
+}
+
+.hero-company-link {
+  @apply text-accent dark:text-dark-accent font-medium hover:underline;
+}
+
+.hero-button {
+  @apply mt-8;
+}
