@@ -189,3 +189,110 @@ html {
 .hero-button {
   @apply mt-8;
 }
+
+/* Section Heading Base */
+.section-heading {
+    font-size: theme('fontSize.3xl');
+    font-weight: theme('fontWeight.bold');
+    color: theme('colors.heading');
+    margin-bottom: theme('spacing.8');
+    @apply relative flex items-center;
+}
+
+html.dark .section-heading { 
+    color: theme('colors.dark-heading'); 
+}
+
+.section-heading .section-number {
+    font-family: theme('fontFamily.mono');
+    font-size: theme('fontSize.xl');
+    color: theme('colors.accent');
+    margin-right: theme('spacing.2');
+    font-weight: theme('fontWeight.normal');
+}
+
+html.dark .section-heading .section-number { 
+    color: theme('colors.dark-accent'); 
+}
+
+.section-heading::after {
+    content: '';
+    @apply block flex-1 h-px bg-light-border dark:bg-dark-border ml-4;
+}
+
+@media (min-width: 768px) {
+    .section-heading { 
+        font-size: theme('fontSize.4xl'); 
+    }
+    .section-heading .section-number { 
+        font-size: theme('fontSize.2xl'); 
+    }
+}
+
+/* Container Base Styles */
+.container-lg {
+    @apply max-w-4xl mx-auto px-6;
+}
+
+.container-xl { 
+    @apply max-w-xl mx-auto px-6; 
+}
+
+.container-md { 
+    @apply max-w-md mx-auto px-6; 
+}
+
+.container { 
+    @apply max-w-6xl mx-auto px-6; 
+}
+
+/* About Section Styles */
+.about-section {
+    @apply py-24;
+}
+
+.about-layout {
+    @apply flex flex-col md:flex-row gap-12 items-start;
+}
+
+.about-text {
+    @apply flex-1;
+}
+
+.about-text p {
+    @apply text-secondary dark:text-dark-secondary mb-4 leading-relaxed;
+}
+
+.skills-list {
+    @apply grid grid-cols-2 gap-2 text-secondary dark:text-dark-secondary font-mono text-sm mt-4;
+}
+
+.skill-item {
+    @apply relative pl-6;
+}
+
+.skill-item::before {
+    content: '▹';
+    @apply absolute left-0 text-accent dark:text-dark-accent;
+}
+
+.about-image-container {
+    @apply flex-shrink-0 max-w-xs mx-auto md:mx-0 mt-8 md:mt-0;
+}
+
+.about-image-wrapper {
+    @apply relative block;
+}
+
+.about-image-wrapper::after {
+    content: '';
+    @apply absolute top-3 left-3 w-full h-full border-2 border-accent dark:border-dark-accent rounded-lg transition-transform duration-300 -z-10;
+}
+
+.about-image-wrapper:hover::after {
+    @apply translate-x-1 translate-y-1;
+}
+
+.about-image {
+    @apply rounded-lg shadow-lg w-full h-auto object-cover relative z-10;
+}
