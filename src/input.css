@@ -30,3 +30,118 @@ html {
     @apply scroll-smooth;
     scroll-padding-top: 70px;
 }
+
+/* Header Styles */
+.site-header {
+  @apply fixed w-full top-0 bg-lightbg/85 dark:bg-darkbg/85 z-50 shadow-md backdrop-blur-md;
+}
+
+.header-container {
+  @apply max-w-6xl mx-auto px-6 py-4 flex justify-between items-center;
+}
+
+.site-logo {
+  @apply text-accent dark:text-dark-accent font-bold text-xl font-mono;
+}
+
+.header-actions {
+  @apply flex items-center space-x-4;
+}
+
+.desktop-nav {
+  @apply hidden md:block;
+}
+
+.nav-list {
+  @apply flex space-x-6 text-sm font-mono;
+}
+
+.nav-link {
+  @apply text-darkText dark:text-lightText hover:text-accent dark:hover:text-dark-accent transition;
+}
+
+/* Generic Button Styles */
+.button {
+  @apply rounded transition;
+}
+
+.button-sm {
+  @apply px-3 py-1 text-sm;
+}
+
+.button-md {
+  @apply px-4 py-2;
+}
+
+.button-lg {
+  @apply px-6 py-3 text-sm;
+}
+
+.button-outline {
+  @apply border border-accent dark:border-dark-accent text-accent dark:text-dark-accent hover:bg-accent dark:hover:bg-dark-accent hover:text-lightbg dark:hover:text-darkbg;
+}
+
+.button-icon {
+  @apply p-2 border border-accent dark:border-dark-accent text-accent dark:text-dark-accent hover:bg-accent dark:hover:bg-dark-accent hover:text-lightbg dark:hover:text-darkbg flex items-center gap-2;
+}
+
+.button-icon svg, .mobile-nav-close svg, .menu-toggle-button svg {
+  @apply h-4 w-4;
+}
+
+.mobile-nav-close svg {
+  @apply h-6 w-6;
+}
+
+.theme-toggle-button .icon-sun {
+  @apply dark:block hidden;
+}
+
+.theme-toggle-button .icon-moon {
+  @apply dark:hidden block;
+}
+
+.menu-toggle-button {
+  @apply md:hidden p-2 focus:outline-none;
+}
+
+.hamburger {
+  @apply w-6 h-0.5 bg-accent dark:bg-dark-accent transition-all duration-300;
+}
+
+.hamburger:not(:last-child) {
+  @apply mb-1.5;
+}
+
+.menu-toggle-button.active .hamburger:nth-child(1) {
+  @apply rotate-45 translate-y-[7px];
+}
+
+.menu-toggle-button.active .hamburger:nth-child(2) {
+  @apply opacity-0;
+}
+
+.menu-toggle-button.active .hamburger:nth-child(3) {
+  @apply -rotate-45 -translate-y-[7px];
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  @apply hidden md:hidden fixed top-0 right-0 w-3/4 max-w-sm h-full bg-lightbg dark:bg-darkbg shadow-lg transform translate-x-full transition-transform duration-300 z-40;
+}
+
+.mobile-nav.active {
+  @apply translate-x-0;
+}
+
+.mobile-nav-close {
+  @apply absolute top-5 right-5 p-2 text-darkText dark:text-lightText md:hidden;
+}
+
+.mobile-nav-list {
+  @apply flex flex-col items-center justify-center h-full space-y-6 text-lg font-mono;
+}
+
+.mobile-nav .resume-button {
+  @apply px-4 py-2;
+}

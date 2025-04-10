@@ -7,17 +7,53 @@
     <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <header class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Repository of Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#Experience">Projects</a></li>
-                <li><a href="#Projects">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="site-logo">Portfolio</a>
+            
+            <div class="header-actions">
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="/resume.pdf" class="nav-link button button-outline button-sm resume-button">Resume</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="button button-icon theme-toggle-button">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                
+                <button class="menu-toggle-button">
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <nav class="mobile-nav">
+        <button id="closeMenuBtn" class="mobile-nav-close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="/resume.pdf" class="mobile-nav-link button button-outline button-md resume-button">Resume</a></li>
+        </ul>
+    </nav>
 
     <main id="mainContent" class="container mx-auto px-4 py-8">
         <section id="home">
