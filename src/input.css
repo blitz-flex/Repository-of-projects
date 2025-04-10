@@ -296,3 +296,57 @@ html.dark .section-heading .section-number {
 .about-image {
     @apply rounded-lg shadow-lg w-full h-auto object-cover relative z-10;
 }
+
+/* Experience Section Styles */
+.experience-section {
+  @apply py-24;
+}
+
+.experience-list {
+  @apply space-y-10 relative;
+}
+
+.experience-item {
+  @apply relative bg-card dark:bg-dark-card p-6 rounded-lg shadow-md border border-light-border dark:border-dark-border transition-transform hover:-translate-y-1 hover:shadow-lg;
+}
+
+.experience-date {
+  @apply block text-accent dark:text-dark-accent text-sm font-mono uppercase tracking-wide mb-2;
+}
+
+.experience-title {
+  @apply text-xl font-semibold text-heading dark:text-dark-heading;
+}
+
+.company-link {
+  @apply text-accent dark:text-dark-accent hover:underline;
+}
+
+.company-link .arrow-icon {
+  @apply inline-block text-sm translate-x-0.5 -translate-y-0.5;
+}
+
+.experience-description {
+  @apply mt-3 text-secondary dark:text-dark-secondary;
+}
+
+.tech-list {
+  @apply flex flex-wrap gap-2 mt-4 font-mono text-xs;
+}
+
+.tech-item {
+  @apply bg-accent/10 dark:bg-dark-accent/15 text-accent dark:text-dark-accent px-3 py-1 rounded-full;
+}
+
+@media (max-width: 768px) {
+  .experience-list::before {
+    @apply left-[6px];
+  }
+  .experience-item::before {
+    @apply top-[24px];
+  }
+}
+
+@media (max-width: 480px) {
+  /* მობილური ეკრანისთვის დამატებითი ცვლილებები საჭიროების შემთხვევაში */
+}
