@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+    @apply font-sans bg-lightbg text-darkText transition-colors duration-300;
+}
+
+html.dark body {
+    @apply bg-darkbg text-lightText;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    @apply text-heading font-bold;
+}
+
+html.dark h1, 
+html.dark h2, 
+html.dark h3, 
+html.dark h4, 
+html.dark h5, 
+html.dark h6 {
+    @apply text-dark-heading;
+}
+
+/* Base html styles */
+html {
+    @apply scroll-smooth;
+    scroll-padding-top: 70px;
+}
