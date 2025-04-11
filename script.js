@@ -25,11 +25,12 @@ function toggleMobileMenu() {
     mobileNav.classList.toggle('active');
 }
 
-menuBtn.addEventListener('click', toggleMobileMenu);
-closeMenuBtn.addEventListener('click', toggleMobileMenu);
+// Updated to use pointerdown for better mobile optimization
+menuBtn.addEventListener('pointerdown', toggleMobileMenu);
+closeMenuBtn.addEventListener('pointerdown', toggleMobileMenu);
 
 // Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
+document.addEventListener('pointerdown', (e) => {
     if (mobileNav.classList.contains('active') && 
         !mobileNav.contains(e.target) && 
         !menuBtn.contains(e.target)) {
@@ -40,5 +41,19 @@ document.addEventListener('click', (e) => {
 // Close mobile menu when clicking on a link
 const mobileLinks = mobileNav.querySelectorAll('a');
 mobileLinks.forEach(link => {
-    link.addEventListener('click', toggleMobileMenu);
+    link.addEventListener('pointerdown', toggleMobileMenu);
+});
+
+// Add ScrollReveal animation logic
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '50px',
+  duration: 1000,
+  delay: 200,
+  reset: true,
+});
+
+// Apply ScrollReveal to elements with data-sr attribute
+document.querySelectorAll('[data-sr]').forEach((el) => {
+  sr.reveal(el);
 });
